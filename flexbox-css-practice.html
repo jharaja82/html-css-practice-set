@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Flexbox Demo</title>
+  <style>
+    .flex-container {
+      display: flex;
+      flex-direction: row;         /* row | row-reverse | column | column-reverse */
+      flex-wrap: wrap;             /* nowrap | wrap | wrap-reverse */
+      justify-content: space-between; /* flex-start | center | space-between | space-around | space-evenly */
+      align-items: center;         /* stretch | center | flex-start | flex-end | baseline */
+      gap: 20px;
+      height: 300px;
+      background-color: #eee;
+      padding: 20px;
+      border: 2px solid #ccc;
+    }
+
+    .item {
+      background-color: steelblue;
+      color: white;
+      padding: 20px;
+      font-size: 18px;
+      width: 100px;
+      height: 100px;
+      text-align: center;
+    }
+
+    .self-align {
+      align-self: flex-end; /* only this box overrides align-items */
+      background-color: tomato;
+    }
+  </style>
+</head>
+<body>
+<p>
+            <a href="./index.html">Home page</a>
+        </p>
+  <h2>Flexbox Demo</h2>
+  <p>Main Axis = horizontal (default)<br>Cross Axis = vertical (default)</p>
+
+  <div class="flex-container">
+    <div class="item">Box 1</div>
+    <div class="item self-align">Box 2 (align-self)</div>
+    <div class="item">Box 3</div>
+    <div class="item">Box 4</div>
+  </div>
+
+</body>
+</html>

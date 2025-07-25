@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Pseudo-classes & Pseudo-elements</title>
+  <style>
+    /* 🔹 Pseudo-classes */
+    button:hover {
+      background-color: green;
+      color: white;
+    }
+
+    button:active {
+      transform: scale(0.95);
+    }
+
+    input:focus {
+      border: 2px solid blue;
+      outline: none;
+    }
+
+    li:nth-child(2) {
+      color: red;
+      font-weight: bold;
+    }
+
+    /* 🔹 Pseudo-elements */
+    p::before {
+      content: "👉 ";
+      color: orange;
+    }
+
+    p::after {
+      content: " ✔";
+      color: green;
+    }
+
+    input::placeholder {
+      color: gray;
+      font-style: italic;
+    }
+  </style>
+</head>
+<body>
+<p>
+            <a href="./index.html">Home page</a>
+        </p>
+  <h2>Pseudo-Classes</h2>
+
+  <!-- :hover, :active -->
+  <button>Hover & Click Me</button><br><br>
+
+  <!-- :focus -->
+  <input type="text" placeholder="Click to focus"><br><br>
+
+  <!-- :nth-child(n) -->
+  <ul>
+    <li>Item 1</li>
+    <li>Item 2 (highlighted)</li>
+    <li>Item 3</li>
+  </ul>
+
+  <h2>Pseudo-Elements</h2>
+
+  <!-- ::before & ::after -->
+  <p>This is a paragraph</p>
+
+  <!-- ::placeholder -->
+  <input type="text" placeholder="Styled placeholder">
+
+</body>
+</html>

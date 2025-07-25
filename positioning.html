@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CSS Positioning Examples</title>
+  <style>
+    body {
+      height: 2000px; /* For scroll testing */
+      padding: 20px;
+      font-family: sans-serif;
+    }
+
+    .box {
+      width: 200px;
+      height: 100px;
+      margin: 10px;
+      color: white;
+      padding: 10px;
+    }
+
+    .static-box {
+      position: static;
+      background-color: gray;
+    }
+
+    .relative-box {
+      position: relative;
+      left: 40px;
+      top: 10px;
+      background-color: blue;
+    }
+
+    .absolute-box-wrapper {
+      position: relative; /* required for absolute inside */
+      height: 150px;
+      border: 2px dashed #ccc;
+    }
+
+    .absolute-box {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background-color: red;
+    }
+
+    .fixed-box {
+      position: fixed;
+      bottom: 10px;
+      right: 10px;
+      background-color: green;
+    }
+
+    .sticky-box {
+      position: sticky;
+      top: 0;
+      background-color: orange;
+      z-index: 2;
+      padding: 20px;
+    }
+
+    .z-index-example {
+      position: relative;
+    }
+
+    .z1 {
+      background: purple;
+      z-index: 1;
+      position: absolute;
+      top: 20px;
+      left: 20px;
+    }
+
+    .z2 {
+      background: yellow;
+      z-index: 2;
+      position: absolute;
+      top: 40px;
+      left: 40px;
+      color: black;
+    }
+  </style>
+</head>
+<body>
+<p>
+            <a href="./index.html">Home page</a>
+        </p>
+  <div class="box static-box">Static (default)</div>
+
+  <div class="box relative-box">Relative (shifted 40px)</div>
+
+  <div class="absolute-box-wrapper">
+    <div class="box absolute-box">Absolute (inside relative)</div>
+  </div>
+
+  <div class="box sticky-box">Sticky (sticks to top when scrolling)</div>
+
+  <div class="box fixed-box">Fixed (always visible)</div>
+
+  <div class="z-index-example" style="height: 150px; position: relative;">
+    <div class="box z1">z-index 1</div>
+    <div class="box z2">z-index 2 (on top)</div>
+  </div>
+
+</body>
+</html>

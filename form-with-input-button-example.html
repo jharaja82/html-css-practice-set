@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Simple HTML Form</title>
+</head>
+<body>
+
+  <h2>User Registration Form</h2>
+
+  <form action="submit.html" method="post">
+    
+    <!-- Name Field -->
+    <label for="name">Full Name:</label><br>
+    <input type="text" id="name" name="fullname" placeholder="Enter your name" required><br><br>
+
+    <!-- Email Field -->
+    <label for="email">Email:</label><br>
+    <input type="email" id="email" name="email" placeholder="Enter your email" required><br><br>
+
+    <!-- Password Field -->
+    <label for="password">Password:</label><br>
+    <input type="password" id="password" name="password" required><br><br>
+
+    <!-- Gender Radio Buttons -->
+    <label>Gender:</label><br>
+    <input type="radio" id="male" name="gender" value="male">
+    <label for="male">Male</label>
+
+    <input type="radio" id="female" name="gender" value="female">
+    <label for="female">Female</label><br><br>
+
+    <!-- City Dropdown -->
+    <label for="city">City:</label><br>
+    <select id="city" name="city">
+      <option value="delhi">Delhi</option>
+      <option value="mumbai">Mumbai</option>
+      <option value="kolkata">Kolkata</option>
+    </select><br><br>
+
+    <!-- Submit and Reset Buttons -->
+    <input type="submit" value="Register">
+    <input type="reset" value="Clear">
+
+  </form>
+
+</body>
+</html>
